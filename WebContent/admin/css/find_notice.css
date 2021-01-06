@@ -1,0 +1,77 @@
+article {
+    width: 100%;
+    height: 100%;
+    padding-left: 7%;
+}
+article .bg {
+    background: url('../img/notice.bg.png') no-repeat center top;
+    width: 100%;
+    height: 100%;
+    margin-top: -8px;
+    padding: 10% 0 0 0;
+}
+article .bg .notice {
+    width: 700px;
+    height: 600px;
+    margin: 0 auto;
+    margin-left: 50%;
+}
+article .bg .notice table {
+    width: 640px;
+    text-align: center;
+    border-collapse: collapse;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #000;
+}
+article .bg .notice table tr, td {
+    border: 2px solid #95a5a6;
+    line-height: 64px;
+}
+article .bg .notice table a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    transition: font-size 0.5s, transform 1s;
+}
+article .bg .notice table a:hover {
+    color: orange;
+    font-size: 18px;
+    transition: font-size 0.5s, transform 1s;
+}
+article .bg .notice .info {
+    position: absolute;
+    top: 48%;
+    left: 24%;
+    width: 450px;
+    height: 300px;
+}
+article .bg .notice .info textarea {
+    margin-top: 10px;
+    width: 450px;
+    height: 200px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: 2px solid #27cc71;
+    font-size: 24px;
+    color: #000;
+    resize: none;
+    padding: 1%;
+    text-indent: 36px;
+}
+
+.top{
+	position:fixed;
+	bottom:15%;
+	width:100%;
+	left:27%;
+	 font-size:22px;
+}
+.top a{
+	  text-decoration: none;
+    color:  #000;
+}
+.top a:hover{
+	 
+    color: #2ecc71;
+}

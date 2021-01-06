@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.sjzc.edu.mapper.AdminMapper" >
+  
+  	
+  	<select id="findByAccount" resultType="String" parameterType="String">
+  		select pic from admin where account=#{account}
+  	 </select>
+  	 
+  	<select id="login" resultType="cn.sjzc.edu.po.Admin" parameterType="cn.sjzc.edu.po.Admin">
+  		select * from admin where  account=#{account} and pwd=#{pwd}
+  	 </select>
+  	 
+  	 
+  	
+</mapper>

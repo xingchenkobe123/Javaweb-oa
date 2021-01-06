@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-size: 18px;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #333;
+    padding: 0 5% 0 20%;
+    z-index: 1;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    float: left;
+    width: 120px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    margin-right: 30px;
+}
+
+nav ul li.last {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    display: block;
+    width: 120px;
+    height: 60px;
+    text-decoration: none;
+    color: #fff;
+}
+
+nav ul li a:hover {
+    color: #333;
+    background-color: #fff;
+    transition: width 2s;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+      background-color: #f2f7f8;
+    
+}
+
+article {
+    width: 100%;
+    height: 100%;
+    margin-top: 70px;
+}
+
+article .bg {
+    background: url('../img/log.png') no-repeat center top;
+    width: 100%;
+    height: 100%;
+    margin-top: -8px;
+    padding: 10% 0 0 0;
+}
+
+article .bg .show_log {
+    width: 900px;
+    height: 600px;
+    margin: 0 auto;
+    margin-left: 30%;
+}
+article .bg .show_log table {
+    width: 840px;
+    text-align: center;
+    border-collapse: collapse;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #000;
+}
+article .bg .show_log table tr, td {
+    border: 2px solid #95a5a6;
+    line-height: 64px;
+}
+article .bg .show_log table a {
+
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    transition: font-size 0.5s, transform 1s;
+}
+article .bg .show_log table a:hover {
+    color: orange;
+    font-size: 18px;
+    transition: font-size 0.5s, transform 1s;
+}
+
+
+.left_ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 14%;
+    padding-top: 18%;
+    background-color: #fff;
+}
+
+.left_ul .avatar {
+    position: absolute;
+    top: 8%;
+    left: 30%;
+}
+
+.left_ul .avatar img {
+    width: 100px;
+}
+
+.left_ul ul {
+    text-align: center;
+    list-style: none;
+}
+
+.left_ul ul li {
+    width: 80px;
+    padding-left: 25%;
+    margin: 10px;
+}
+
+.left_ul ul li p {
+    width: 80px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+     font-size:20px;
+}
+
+.left_ul ul li p:hover {
+    color: gold;
+}
+
+.left_ul ul li a {
+    display: block;
+    width: 80px;
+    text-decoration: none;
+    color: #34495e;
+    font-size:20px;
+}
+
+.left_ul ul li a:hover {
+    color: red;
+}
+
+footer {
+    position: fixed;
+    bottom: 10%;
+    left: 40%;
+}
+
+#mytop{
+	position:fixed;
+	bottom:35%;
+	width:100%;
+	left:46%;
+	 font-size:22px;
+}
+#mytop a{
+	  text-decoration: none;
+    color:  #000;
+}
+#mytop a:hover{
+	 
+    color: #2ecc71;
+}

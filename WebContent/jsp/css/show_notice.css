@@ -1,0 +1,146 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	font-size: 18px;
+}
+
+nav {
+	width: 100%;
+	height: 60px;
+	background-color: #333;
+	padding: 0 5% 0 20%;
+}
+
+nav ul {
+	list-style: none;
+}
+
+nav ul li {
+	float: left;
+	width: 120px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	margin-right: 30px;
+}
+
+nav ul li.last {
+	margin-left: 30px;
+}
+
+nav ul li a {
+	display: block;
+	width: 120px;
+	height: 60px;
+	text-decoration: none;
+	color: #fff;
+}
+
+nav ul li a:hover {
+	color: #333;
+	background-color: #fff;
+	transition: width 2s;
+}
+
+main {
+	width: 100%;
+	height: 100%;
+	background-color: #f2f7f8;
+}
+
+article {
+	width: 100%;
+	height: 100%;
+	padding: 2% 2% 0 1%;
+}
+
+article .bg {
+	background: url('../img/notice.bg.png') no-repeat center top;
+	width: 100%;
+	height: 100%;
+	padding: 10% 0 0 0;
+}
+
+article .bg .notice {
+	width: 700px;
+	height: 600px;
+	margin: 0 auto;
+	margin-left: 50%;
+}
+
+article .bg .notice table {
+	width: 640px;
+	text-align: center;
+	border-collapse: collapse;
+	border-radius: 5px;
+	font-size: 16px;
+	color: #000;
+}
+
+article .bg .notice table tr, td {
+	border: 2px solid #95a5a6;
+	line-height: 64px;
+}
+
+article .bg .notice table a {
+	text-decoration: none;
+	color: #000;
+	font-size: 16px;
+	transition: font-size 0.5s, transform 1s;
+}
+
+article .bg .notice table a:hover {
+	color: orange;
+	font-size: 18px;
+	transition: font-size 0.5s, transform 1s;
+}
+
+article .bg .notice .info {
+	position: absolute;
+	top: 38%;
+	left: 20%;
+	width: 450px;
+	height: 300px;
+}
+
+article .bg .notice .info textarea {
+
+	margin-top: 10px;
+	width: 450px;
+	height: 200px;
+	border-radius: 5px;
+	box-sizing: border-box;
+	border: 2px solid #27cc71;
+	font-size: 18px;
+	color: #000;
+	resize: none;
+	padding: 1%;
+	text-indent: 36px;
+}
+
+footer {
+	position: fixed;
+	bottom: 10%;
+	left: 40%;
+}
+#top{
+	position:fixed;
+	bottom:35%;
+	width:100%;
+	left:60%;
+	 font-size:22px;
+}
+#top a{
+	  text-decoration: none;
+    color:  #000;
+}
+#top a:hover{
+	 
+    color: #2ecc71;
+}

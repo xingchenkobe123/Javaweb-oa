@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.sjzc.edu.mapper.WorkerMapper" >
+
+
+<select id="findTotalRecords"   resultType="int">
+
+select count(*) from `worker`
+
+</select>
+
+<select id="likeNameRecords"  parameterType="string"  resultType="int">
+
+select count(*) from `worker` where `name` like #{name}
+
+</select>
+<select id="likeBranchRecords"  parameterType="string"  resultType="int">
+
+select count(*) from `worker` where `branch` like #{branch}
+
+</select>
+
+<select id="findTotalRecords_schema"   resultType="int" parameterType="cn.sjzc.edu.po.Worker">
+
+select count(*) from `worker` where `branch`=#{branch} and `group`=#{group}
+
+</select>
+
+<select id="findById"   resultType="cn.sjzc.edu.po.Worker"  parameterType="int">
+
+select * from worker where id=#{id}
+
+</select>
+
+
+  	<select id="findByPhone" resultType="cn.sjzc.edu.po.Worker" parameterType="String">
+  		select * from worker where phone=#{phone}
+  	 </select>
+  	 
+  	<select id="findApprover" resultType="String" parameterType="cn.sjzc.edu.po.Worker">
+  		select name from worker where branch=#{branch} and `group`=#{group} and `lv`=#{lv}
+  	 </select>
+  	 
+  	<select id="login" resultType="cn.sjzc.edu.po.Worker" parameterType="cn.sjzc.edu.po.Worker">
+  		select * from worker where  phone=#{phone} and pwd=#{pwd}
+  	 </select>
+
+ 
+
+<update id="edit" parameterType="cn.sjzc.edu.po.Worker" >
+
+	update worker set `branch`=#{branch},`group`=#{group},`phone`=#{phone},`pwd`=#{pwd} where `id`=#{id}
+
+</update>
+<update id="edit_lv" parameterType="cn.sjzc.edu.po.Worker" >
+
+	update worker set `lv`=#{lv} where `id`=#{id}
+
+</update>
+
+<update id="edit_pwd" parameterType="cn.sjzc.edu.po.Worker" >
+
+	update worker set `pwd`=#{pwd} where `id`=#{id}
+
+</update>
+
+<update id="edit_phone" parameterType="cn.sjzc.edu.po.Worker" >
+
+	update worker set `phone`=#{phone} where `id`=#{id}
+
+</update>
+
+
+<select id="pageList" resultType="cn.sjzc.edu.po.Worker"  parameterType="cn.sjzc.edu.po.PageBean">
+
+<!-- 注意，这里limit后边的两个占位符与接口中pageList方法的参数相匹配 -->
+select * from worker limit #{startIndex},#{pageSize}
+
+
+</select >
+<select id="pageListSearchName" resultType="cn.sjzc.edu.po.Worker"  parameterType="cn.sjzc.edu.po.PageBean">
+
+<!-- 注意，这里limit后边的两个占位符与接口中pageList方法的参数相匹配 -->
+select * from worker limit #{startIndex},#{pageSize}
+
+
+</select >
+
+<select id="pageList_schema" resultType="cn.sjzc.edu.po.Worker"  parameterType="cn.sjzc.edu.po.PageBean">
+
+<!-- 注意，这里limit后边的两个占位符与接口中pageList方法的参数相匹配 -->
+SELECT * FROM `worker` WHERE `branch`=#{branch} AND `group`=#{group} LIMIT #{startIndex},#{pageSize}
+
+</select >
+
+
+
+
+
+<insert id="add"  parameterType="cn.sjzc.edu.po.Worker" >
+  INSERT INTO worker ( `name`, `sex`,`age`, `branch`, `group`, `phone`, `lv`,`pwd`) 
+   VALUES(#{name},#{sex},#{age},#{branch},#{group},#{phone},#{lv},#{pwd})
+</insert>
+
+<delete id="delete" parameterType="int" >
+
+	delete from worker where id=#{id}
+</delete>
+
+</mapper>

@@ -1,0 +1,101 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	font-size: 18px;
+}
+
+nav {
+	width: 100%;
+	height: 60px;
+	background-color: #333;
+	padding: 0 5% 0 20%;
+}
+
+nav ul {
+	list-style: none;
+}
+
+nav ul li {
+	float: left;
+	width: 120px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	margin-right: 30px;
+}
+
+nav ul li.last {
+	margin-left: 30px;
+	
+}
+
+nav ul li a {
+	display: block;
+	width: 100%;
+	height: 60px;
+	text-decoration: none;
+	color: #fff;
+}
+
+nav ul li a:hover {
+	color: #333;
+	background-color: #fff;
+	transition: width 2s;
+}
+
+main {
+	width: 100%;
+	height: 100%;
+	background-color: #f2f7f8;
+}
+
+main .bg {
+	width: 100%;
+	height: 100%;
+	background: url(../img/branch_bg.jpg) no-repeat center top;
+}
+
+main .bg .tip {
+	width: 100%;
+	height: 60px;
+	padding-top: 16%;
+}
+
+main .bg .tip p {
+	width: 20%;
+	height: 60px;
+	font-size: 36px;
+	color: #27cc71;
+	float: right;
+	margin-right: 24%;
+}
+
+main .bg .font_box {
+	width: 700px;
+	box-sizing: border-box;
+	border: 2px solid lightblue;
+	border-radius: 10px;
+	float: right;
+	margin-right: 24%;
+	margin-top: 30px;
+	padding: 1%;
+}
+
+main .bg .font_box p {
+	padding: 24px 0 24px 0;
+	text-indent: 30px;
+	width: 100%;
+	font-size: 24px;
+}
+
+footer {
+	position: fixed;
+	bottom: 10%;
+	left: 40%;
+}

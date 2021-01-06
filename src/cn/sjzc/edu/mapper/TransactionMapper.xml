@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.sjzc.edu.mapper.TransactionMapper" >
+
+
+<select id="findTotalRecords"   resultType="int">
+
+select count(*) from `transaction`
+
+</select>
+<select id="findTotalRecords_approver" parameterType="String"  resultType="int">
+
+select count(*) from `transaction` where approver=#{approver}
+
+</select>
+
+
+<select id="findMyTransaction" resultType="cn.sjzc.edu.po.Transaction"  parameterType="cn.sjzc.edu.po.PageBean">
+
+<!-- 注意，这里limit后边的两个占位符与接口中pageList方法的参数相匹配 -->
+select * from  `transaction` where approver=#{approver} limit #{startIndex},#{pageSize}
+
+
+</select >
+
+<select id="findTotalRecords_name"   resultType="int"  parameterType="String">
+
+select count(*) from `transaction` where `name`=#{name}
+
+</select>
+
+
+
+
+<select id="pageList" resultType="cn.sjzc.edu.po.Transaction"  parameterType="cn.sjzc.edu.po.PageBean">
+
+<!-- 注意，这里limit后边的两个占位符与接口中pageList方法的参数相匹配 -->
+select * from  `transaction` limit #{startIndex},#{pageSize}
+
+
+</select >
+
+
+<select id="pageList_name" resultType="cn.sjzc.edu.po.Transaction"  parameterType="cn.sjzc.edu.po.PageBean">
+
+<!-- 注意，这里limit后边的两个占位符与接口中pageList方法的参数相匹配 -->
+select * from  `transaction`  where `name`=#{name} limit #{startIndex},#{pageSize}
+
+
+</select >
+
+<update id="edit" parameterType="cn.sjzc.edu.po.Transaction" >
+
+	update `transaction` set `state`=#{state},`result`=#{result} where `id`=#{id}
+
+</update>
+
+
+
+
+<insert id="add"  parameterType="cn.sjzc.edu.po.Transaction" >
+  INSERT INTO  transaction 
+ ( `name`,`start`,`branch`,`type`,`last`,`reason`,`approver`,`copy`,`state`,`result`)
+  
+     VALUES(#{name},#{start},#{branch},#{type},#{last},#{reason},#{approver},#{copy},#{state},#{result})
+</insert>
+
+
+<delete id="delete" parameterType="int" >
+
+	delete from  transaction where id=#{id}
+</delete>
+
+</mapper>

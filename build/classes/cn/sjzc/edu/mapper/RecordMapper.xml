@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.sjzc.edu.mapper.RecordMapper">
+
+
+	<select id="findTotalRecords" resultType="int">
+
+		select count(*) from
+		Record
+
+	</select>
+
+
+
+
+
+
+	<select id="pageList" resultType="cn.sjzc.edu.po.Record"
+		parameterType="cn.sjzc.edu.po.PageBean">
+
+		<!-- 注意，这里limit后边的两个占位符与接口中pageList方法的参数相匹配 -->
+		select * from record limit #{startIndex},#{pageSize}
+
+
+	</select>
+
+	<insert id="add" parameterType="cn.sjzc.edu.po.Record">
+		INSERT INTO record (
+		`name`,`branch`,`start`,`over`)
+
+		VALUES(#{name},#{branch},#{start},#{over})
+	</insert>
+
+	<delete id="delete" parameterType="int">
+
+		delete from record where
+		id=#{id}
+	</delete>
+
+</mapper>

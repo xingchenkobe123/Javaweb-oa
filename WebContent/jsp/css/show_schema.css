@@ -1,0 +1,255 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	font-size: 18px;
+}
+
+nav {
+	width: 100%;
+	height: 60px;
+	background-color: #333;
+	padding: 0 5% 0 20%;
+}
+
+nav ul {
+	list-style: none;
+}
+
+nav ul li {
+	float: left;
+	width: 120px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	margin-right: 30px;
+}
+
+nav ul li.last {
+	margin-left: 30px;
+}
+
+nav ul li a {
+	display: block;
+	width: 120px;
+	height: 60px;
+	text-decoration: none;
+	color: #fff;
+}
+
+nav ul li a:hover {
+	color: #333;
+	background-color: #fff;
+	transition: width 2s;
+}
+
+main {
+	width: 100%;
+	height: 100%;
+	background-color: #f2f7f8;
+	position: relative;
+}
+
+main .bg {
+	widows: 100%;
+	height: 100%;
+	background: url('../img/schema_bg.jpg') no-repeat center top;
+}
+
+main .bg .first_dom {
+	animation: move_left 3.5s;
+	position: absolute;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	box-sizing: border-box;
+	border: 2px solid #000;
+	top: 1%;
+}
+
+main .bg .second_dom {
+	top: 1%;
+	animation: move_right 3.5s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	box-sizing: border-box;
+	border: 2px solid #000;
+}
+
+
+
+
+
+@keyframes move_left {
+    from {
+       left:10%;
+    }
+    to {
+        left: 40%;
+    }
+}
+@-webkit-keyframes move_left {
+    from {
+       left:10%;
+    }
+    to {
+        left: 40%;
+    }
+}
+
+@keyframes move_right {
+    from {
+       left:90%;
+    }
+    to {
+        left: 40%;
+    }
+}
+@-webkit-keyframes move_right {
+    from {
+       left:90%;
+    }
+    to {
+        left: 40%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+main .bg .first_dom p {
+	font-size: 24px;
+	position: absolute;
+	top: 37%;
+	left: 8%;
+}
+
+main .bg .second_dom p {
+	font-size: 24px;
+	position: absolute;
+	top: 37%;
+	left: 56%;
+}
+
+main .bg .branch_item {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 20%;
+	left: 28%;
+}
+
+main .bg .branch_item ul {
+	list-style: none;
+}
+
+main .bg .branch_item ul li {
+	float: left;
+	margin-right: 20px;
+	width: 100px;
+	height: 36px;
+	text-align: center;
+	line-height: 36px;
+}
+
+ .lis>a {
+	opacity: 0;
+	font-size: 30px;
+	display: block;
+	width: 100px;
+	height: 36px;
+	text-decoration: none;
+	color: #000;
+}
+
+main .bg .branch_item ul li ul {
+	display: none;
+}
+
+main .bg .branch_item ul li ul li {
+	margin-top: 10px;
+	font-size: 18px;
+	background-color: #000;
+	width: 100px;
+	height: 36px;
+}
+
+main .bg .branch_item ul li ul li>a {
+	display: block;
+	width: 100px;
+	height: 36px;
+	text-decoration: none;
+	color: #fff;
+	
+}
+
+footer {
+	position: fixed;
+	bottom: 10%;
+	left: 40%;
+}
+
+table {
+    width: 1200px;
+   position:relative;
+   right:28%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background-color: #e74c3c;
+    color: white;
+    text-align:center;
+}
+tr, td {
+    border: 1px solid #ccc;
+    height:60px;
+    
+}
+.top{
+	 font-size:22px;
+	 position:relative;
+	 left:15%;
+}
+.top a{
+	  text-decoration: none;
+    color:  #000;
+}
+.top a:hover{
+	 
+    color: #2ecc71;
+}
+
+table a{
+	 font-size:22px;
+	 text-decoration: none;
+    color:  #fff;
+}
+table a:hover{
+	
+    color: #2ecc71;
+}

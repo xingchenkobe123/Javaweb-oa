@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.sjzc.edu.mapper.MettingMapper">
+
+
+	<select id="findTotalRecords" resultType="int">
+
+		select count(*) from metting
+
+	</select>
+
+<select id="findTotalRecords_name"  parameterType="String"  resultType="int">
+
+select count(*) from metting where `name`=#{name}
+
+</select>
+
+	<select id="pageList" resultType="cn.sjzc.edu.po.Metting"
+		parameterType="cn.sjzc.edu.po.PageBean">
+
+		<!-- 注意，这里limit后边的两个占位符与接口中pageList方法的参数相匹配 -->
+		select * from Metting limit #{startIndex},#{pageSize}
+
+
+	</select>
+	
+	<select id="own_pageList" resultType="cn.sjzc.edu.po.Metting"  parameterType="cn.sjzc.edu.po.PageBean">
+
+<!-- 注意，这里limit后边的两个占位符与接口中pageList方法的参数相匹配 -->
+select * from metting where `name`=#{name} limit #{startIndex},#{pageSize} 
+
+
+</select >
+
+	<insert id="add" parameterType="cn.sjzc.edu.po.Metting">
+		INSERT INTO metting (
+		`host`,`other`,`theme`,`content`,`start`,`last`,`where`,`name`)
+
+
+		VALUES(#{host},#{other},#{theme},#{content},#{start},#{last},#{where},#{name})
+	</insert>
+
+
+	<delete id="delete" parameterType="int">
+
+		delete from metting where id=#{id}
+	</delete>
+
+</mapper>
